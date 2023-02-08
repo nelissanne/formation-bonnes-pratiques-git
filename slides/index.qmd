@@ -182,9 +182,7 @@ Avec des outils pour faciliter la collaboration
 
 ## :four: Partager son code à un public large {auto-animate=true}
 
-Une vitrine pour vous
-
-![](https://starecat.com/content/wp-content/uploads/github-commits-contributions-you-vs-the-guy-she-told-you-not-to-be-worried-about.jpg){height="500" fig-align="center"}
+Une vitrine pour les projets et l'organisation
 
 
 
