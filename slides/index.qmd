@@ -184,6 +184,7 @@ Avec des outils pour faciliter la collaboration
 
 Une vitrine pour les projets et l'organisation
 
+![](img/ghinseefr.png){fig-align="center" height=475}
 
 
 ## En résumé

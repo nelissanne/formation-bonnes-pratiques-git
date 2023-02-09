@@ -2,14 +2,12 @@
 ## Le fichier `.gitignore`
 
 ::: {.incremental}
-Lors de la création du projet via Rstudio un fichier `.gitignore` a été créé à la racine du projet.
+Lors de la création du projet sur `GitHub`, nous avons demandé la création d'un fichier `.gitignore`, qui se situe à la racine du projet. Il spécifie l'ensemble des fichiers qui seront toujours exclus de l'indexation faite par `Git`.
 
-1. Ajouter le contenu du [.gitignore standard R](https://github.com/github/gitignore/blob/main/R.gitignore)
-2. Exclure également les fichiers de type `*.pdf` et `*.html`
-3. Créer un dossier `data` à la racine du projet et à l'intérieur de celui-ci un fichier `data/raw.csv` 
-4. Ajouter au `.gitignore`: `data/`
-5. Effectuer un *commit* pour ajouter le fichier `.gitignore` au projet Git
-6. Vérifier que toutes les règles ajoutées précédemment fonctionnent comme attendu
+1. Exclure les fichiers de type `*.pdf` et `*.html`
+2. Créer un dossier `data` à la racine du projet et créer à l'intérieur de celui-ci un fichier `data/raw.csv` avec une ligne de données quelconque
+3. Ajouter au `.gitignore` le dossier `data/`
+4. Vérifier que toutes les règles ajoutées précédemment fonctionnent comme attendu
 :::
 
 :::
