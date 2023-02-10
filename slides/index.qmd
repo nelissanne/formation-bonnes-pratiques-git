@@ -332,7 +332,7 @@ un bon `.gitignore`)
 | Pousser les changements locaux (branche `master`) | `git push origin master` |
 | Récupérer les changements distants (branche `master`) | `git pull origin master` |
 
-## Application 0
+## Application 0 {.smaller}
 
 {{< include _application0.qmd >}}
 
@@ -447,6 +447,10 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 {{< include _application7.qmd >}}
 
+## Application 8 (bonus)
+
+{{< include _application8.qmd >}}
+
 ## Ressources utiles {.smaller}
 
 <br>
@@ -465,7 +469,3 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
     - Sollicitez vos collègues utilisateurs de Git !
 
 ## Merci pour votre attention !
-
-<!--
-![](https://miro.medium.com/max/820/0*Gb3B1-Xk5qHaxU7v.jpg){fig-align="center"}
--->

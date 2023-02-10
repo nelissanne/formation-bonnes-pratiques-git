@@ -798,7 +798,7 @@
 </tbody>
 </table>
 </section>
-<section id="application-0" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="application-0" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 0</h2>
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
@@ -809,17 +809,23 @@
 <div>
 <ol type="1">
 <li class="fragment">Créer un compte <a href="https://github.com/"><code>GitHub</code></a></li>
-<li class="fragment">Créer un nouveau dépôt public sur <code>GitHub</code></li>
-<li class="fragment"><a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Générer un <em>token</em></a> (jeton d’accès) d’authentification</li>
-<li class="fragment">Lancer un service <code>RStudio</code> sur le <a href="https://datalab.sspcloud.fr/home">Datalab</a></li>
+<li class="fragment">Créer un nouveau dépôt privé sur <code>GitHub</code></li>
+<li class="fragment">Créer un compte sur le <a href="https://datalab.sspcloud.fr/home">SSP Cloud</a></li>
+<li class="fragment">Lancer un service <code>RStudio</code></li>
 <li class="fragment">Utiliser un <code>terminal</code> pour activer le stockage des identifiants :
 <ul>
 <li class="fragment"><code>git config --global credential.helper store</code></li>
 </ul></li>
-<li class="fragment">Cloner le dépôt distant sur votre environnement local (<code>Datalab</code>):
+<li class="fragment">Cloner le dépôt distant sur votre environnement local (ici, le <code>RStudio</code> du <code>Datalab</code>):
 <ul>
 <li class="fragment"><code>File</code> → <code>New project</code> → <code>Version Control</code> → <code>Git</code></li>
 </ul></li>
+<li class="fragment"><a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Générer un <em>token</em></a> (jeton d’authentification) sur <code>GitHub</code></li>
+<li class="fragment">Stocker le <em>token</em> sur le <code>SSP Cloud</code> (ou un gestionnaire de mot de passe) :
+<ul>
+<li class="fragment"><code>Mon Compte</code> -&gt; <code>Services externes</code> -&gt; <code>Jeton d'accès personnel GitHub</code></li>
+</ul></li>
+<li class="fragment">Terminer la procédure de clonage en fournissant le <em>token</em></li>
 </ol>
 </div>
 </div>
@@ -939,13 +945,11 @@
 </div>
 <div class="callout-content">
 <div>
-<p>Lors de la création du projet via Rstudio un fichier <code>.gitignore</code> a été créé à la racine du projet.</p>
+<p>Lors de la création du projet sur <code>GitHub</code>, nous avons demandé la création d’un fichier <code>.gitignore</code>, qui se situe à la racine du projet. Il spécifie l’ensemble des fichiers qui seront toujours exclus de l’indexation faite par <code>Git</code>.</p>
 <ol type="1">
-<li class="fragment">Ajouter le contenu du <a href="https://github.com/github/gitignore/blob/main/R.gitignore">.gitignore standard R</a></li>
-<li class="fragment">Exclure également les fichiers de type <code>*.pdf</code> et <code>*.html</code></li>
-<li class="fragment">Créer un dossier <code>data</code> à la racine du projet et à l’intérieur de celui-ci un fichier <code>data/raw.csv</code></li>
-<li class="fragment">Ajouter au <code>.gitignore</code>: <code>data/</code></li>
-<li class="fragment">Effectuer un <em>commit</em> pour ajouter le fichier <code>.gitignore</code> au projet Git</li>
+<li class="fragment">Exclure les fichiers de type <code>*.pdf</code> et <code>*.html</code></li>
+<li class="fragment">Créer un dossier <code>data</code> à la racine du projet et créer à l’intérieur de celui-ci un fichier <code>data/raw.csv</code> avec une ligne de données quelconque</li>
+<li class="fragment">Ajouter au <code>.gitignore</code> le dossier <code>data/</code></li>
 <li class="fragment">Vérifier que toutes les règles ajoutées précédemment fonctionnent comme attendu</li>
 </ol>
 </div>
