@@ -289,7 +289,6 @@ Source : [Git Documentation](https://git-scm.com/book/en/v2/Getting-Started-What
 
 ![Source : [itnext.io](https://itnext.io/git-concepts-for-newcomers-part-2-git-repository-working-tree-and-staging-area-a2e720bf3528)](img/completeworkflow.png){height="400" width="500"}
 
-
 ## Commandes essentielles {auto-animate=true}
 
 <br> 
@@ -330,6 +329,20 @@ un bon `.gitignore`)
 | Faire un `commit` | `git commit -m "message"`|
 | Pousser les changements locaux (branche `master`) | `git push origin master` |
 | Récupérer les changements distants (branche `master`) | `git pull origin master` |
+
+## Modes d'authentification
+
+:::{.incremental}
+- [**https**]{.orange}
+  - `git clone https://github.com/username/projet.git`
+  - simple à utiliser
+  - authentification username/token à chaque *push*
+
+- [**ssh**]{.orange}
+  - `git clone git@github.com:username/projet.git`
+  - (plus) complexe à initialiser
+  - authentification automatique 
+:::
 
 ## Application 0 {.smaller}
 
