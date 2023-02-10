@@ -3,17 +3,15 @@
 
 :::{.incremental}
 1. Créer un compte [`GitHub`](https://github.com/)
-2. Créer un nouveau dépôt privé sur `GitHub`
+2. Créer un nouveau dépôt **privé** sur `GitHub`
 3. Créer un compte sur le [SSP Cloud](https://datalab.sspcloud.fr/home)
-4. Lancer un service `RStudio`
-5. Utiliser un `terminal` pour activer le stockage des identifiants : 
-    + `git config --global credential.helper store`
-6. Cloner le dépôt distant sur votre environnement local (ici, le `RStudio` du `Datalab`):
+4. Lancer un service `RStudio`. Dans l'onglet de configuration `Git` du service, fixer la durée du `Cache` pour le stockage des identifiants `GitHub` à une valeur suffisamment élevée
+5. Cloner le dépôt distant sur votre environnement local (ici, le `RStudio` du `Datalab`):
     + `File` → `New project` → `Version Control` → `Git`
-7. [Générer un *token*](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (jeton d'authentification) sur `GitHub`
-8. Stocker le *token* sur le `SSP Cloud` (ou un gestionnaire de mot de passe) :
+6. [Générer un *token*](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (jeton d'authentification) sur `GitHub`
+7. Stocker le *token* sur le `SSP Cloud` (ou un gestionnaire de mot de passe) :
     + `Mon Compte` -> `Services externes` -> `Jeton d'accès personnel GitHub`
-9. Terminer la procédure de clonage en fournissant le *token*
+8. Terminer la procédure de clonage en fournissant le nom d'utilisateur `GitHub` et le *token*
 :::
 
 :::
