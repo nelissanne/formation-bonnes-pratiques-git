@@ -637,7 +637,7 @@
 </section>
 <section id="concepts" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Concepts</h2>
-<p><code>Git</code>, <code>GitHub</code>, <code>GitLab</code>… quelles différences ?</p>
+<h4 data-background-image="background.svg" data-background-size="contain" id="git-github-gitlab-quelles-différences"><code>Git</code>, <code>GitHub</code>, <code>GitLab</code>… quelles différences ?</h4>
 <div>
 <ul>
 <li class="fragment"><code>Git</code> est un <strong>logiciel</strong> ;</li>
@@ -648,7 +648,7 @@
 </section>
 <section id="concepts-1" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Concepts</h2>
-<p><code>Git</code>, <code>GitHub</code>, <code>GitLab</code>… quelles différences ?</p>
+<h4 data-background-image="background.svg" data-background-size="contain" id="git-github-gitlab-quelles-différences-1"><code>Git</code>, <code>GitHub</code>, <code>GitLab</code>… quelles différences ?</h4>
 <div>
 <ul>
 <li class="fragment"><code>GitHub</code> et <code>GitLab</code> sont des <strong>forges logicielles</strong></li>
@@ -675,29 +675,37 @@
 </section>
 <section id="concepts-2" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Concepts</h2>
-<p>Dépôt local / dépôt distant (<code>remote</code>)</p>
+<h4 data-background-image="background.svg" data-background-size="contain" id="dépôt-local-dépôt-distant-remote">Dépôt local / dépôt distant (<code>remote</code>)</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/localremote.png" height="400"></p>
+</figure>
+</div>
+<ul>
+<li>Par défaut, le dépôt distant porte l’alias <code>origin</code></li>
+</ul>
+<!-- ## Concepts {auto-animate=true}
 
-<img data-src="img/localremote.png" class="r-stretch quarto-figure-center"><p>Source : <a href="https://collaboratif-git-formation-insee.netlify.app/des-bases-de-git.html">Collaborative work with R</a></p>
+_Workflow_ (version littéraire) :
+
+- On travaille sur un dépôt local en éditant des fichiers
+- On dit à `Git` que ces fichiers doivent être suivis (`staging area`)
+- On valide les modifications faites en local (`commit`)
+- On soumet les modifications (`push`) après avoir récupéré la version collective (`pull`) -->
 </section>
 <section id="concepts-3" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Concepts</h2>
-<p><em>Workflow</em> (version littéraire) :</p>
-<ul>
-<li>On travaille sur un dépôt local en éditant des fichiers</li>
-<li>On dit à <code>Git</code> que ces fichiers doivent être suivis (<code>staging area</code>)</li>
-<li>On valide les modifications faites en local (<code>commit</code>)</li>
-<li>On soumet les modifications (<code>push</code>) après avoir récupéré la version collective (<code>pull</code>)</li>
-</ul>
+<h4 data-background-image="background.svg" data-background-size="contain" id="workflow-local"><em>Workflow</em> local</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/areas.png" height="400"></p>
+</figure>
+</div>
+<p>Source : <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git Documentation</a></p>
 </section>
 <section id="concepts-4" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Concepts</h2>
-<p><em>Workflow</em> (version imagée) :</p>
-
-<img data-src="img/areas.png" class="r-stretch quarto-figure-center"><p>Source : <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git Documentation</a></p>
-</section>
-<section id="concepts-5" class="slide level2" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
-<h2 data-id="quarto-animate-title">Concepts</h2>
-<p><em>Workflow</em> (version imagée complète) :</p>
+<h4 data-background-image="background.svg" data-background-size="contain" id="workflow-complet"><em>Workflow</em> complet</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/completeworkflow.png" width="500" height="400"></p>
@@ -798,7 +806,26 @@
 </tbody>
 </table>
 </section>
-<section id="application-0" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="modes-dauthentification" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Modes d’authentification</h2>
+<div>
+<ul>
+<li class="fragment"><span class="orange"><strong>https</strong></span>
+<ul>
+<li class="fragment"><code>git clone https://github.com/username/projet.git</code></li>
+<li class="fragment">simple à utiliser</li>
+<li class="fragment">authentification username/token à chaque <em>push</em></li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>ssh</strong></span>
+<ul>
+<li class="fragment"><code>git clone git@github.com:username/projet.git</code></li>
+<li class="fragment">(plus) complexe à initialiser</li>
+<li class="fragment">authentification automatique</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="application-0" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 0</h2>
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
@@ -809,17 +836,23 @@
 <div>
 <ol type="1">
 <li class="fragment">Créer un compte <a href="https://github.com/"><code>GitHub</code></a></li>
-<li class="fragment">Créer un nouveau dépôt public sur <code>GitHub</code></li>
-<li class="fragment"><a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Générer un <em>token</em></a> (jeton d’accès) d’authentification</li>
-<li class="fragment">Lancer un service <code>RStudio</code> sur le <a href="https://datalab.sspcloud.fr/home">Datalab</a></li>
+<li class="fragment">Créer un nouveau dépôt privé sur <code>GitHub</code></li>
+<li class="fragment">Créer un compte sur le <a href="https://datalab.sspcloud.fr/home">SSP Cloud</a></li>
+<li class="fragment">Lancer un service <code>RStudio</code></li>
 <li class="fragment">Utiliser un <code>terminal</code> pour activer le stockage des identifiants :
 <ul>
 <li class="fragment"><code>git config --global credential.helper store</code></li>
 </ul></li>
-<li class="fragment">Cloner le dépôt distant sur votre environnement local (<code>Datalab</code>):
+<li class="fragment">Cloner le dépôt distant sur votre environnement local (ici, le <code>RStudio</code> du <code>Datalab</code>):
 <ul>
 <li class="fragment"><code>File</code> → <code>New project</code> → <code>Version Control</code> → <code>Git</code></li>
 </ul></li>
+<li class="fragment"><a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Générer un <em>token</em></a> (jeton d’authentification) sur <code>GitHub</code></li>
+<li class="fragment">Stocker le <em>token</em> sur le <code>SSP Cloud</code> (ou un gestionnaire de mot de passe) :
+<ul>
+<li class="fragment"><code>Mon Compte</code> -&gt; <code>Services externes</code> -&gt; <code>Jeton d'accès personnel GitHub</code></li>
+</ul></li>
+<li class="fragment">Terminer la procédure de clonage en fournissant le <em>token</em></li>
 </ol>
 </div>
 </div>
@@ -939,13 +972,11 @@
 </div>
 <div class="callout-content">
 <div>
-<p>Lors de la création du projet via Rstudio un fichier <code>.gitignore</code> a été créé à la racine du projet.</p>
+<p>Lors de la création du projet sur <code>GitHub</code>, nous avons demandé la création d’un fichier <code>.gitignore</code>, qui se situe à la racine du projet. Il spécifie l’ensemble des fichiers qui seront toujours exclus de l’indexation faite par <code>Git</code>.</p>
 <ol type="1">
-<li class="fragment">Ajouter le contenu du <a href="https://github.com/github/gitignore/blob/main/R.gitignore">.gitignore standard R</a></li>
-<li class="fragment">Exclure également les fichiers de type <code>*.pdf</code> et <code>*.html</code></li>
-<li class="fragment">Créer un dossier <code>data</code> à la racine du projet et à l’intérieur de celui-ci un fichier <code>data/raw.csv</code></li>
-<li class="fragment">Ajouter au <code>.gitignore</code>: <code>data/</code></li>
-<li class="fragment">Effectuer un <em>commit</em> pour ajouter le fichier <code>.gitignore</code> au projet Git</li>
+<li class="fragment">Exclure les fichiers de type <code>*.pdf</code> et <code>*.html</code></li>
+<li class="fragment">Créer un dossier <code>data</code> à la racine du projet et créer à l’intérieur de celui-ci un fichier <code>data/raw.csv</code> avec une ligne de données quelconque</li>
+<li class="fragment">Ajouter au <code>.gitignore</code> le dossier <code>data/</code></li>
 <li class="fragment">Vérifier que toutes les règles ajoutées précédemment fonctionnent comme attendu</li>
 </ol>
 </div>
@@ -1065,16 +1096,16 @@
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
-<p><strong>Utilisation de branches</strong></p>
+<p><strong>Branches, <em>issues</em> et <em>pull requests</em></strong></p>
 </div>
 <div class="callout-content">
 <div>
 <ol type="1">
-<li class="fragment">Sur le même dépôt local que pour les applications 4 et 5, récupérer les mises à jour de la branche principale du dépôt distant</li>
-<li class="fragment">Créer une branche intitulée <code>&lt;votre_nom&gt;-&lt;votre_prénom&gt;</code></li>
-<li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur une nouvelle branche du dépôt distant (<code>git push -u origin &lt;votre_nom&gt;-&lt;votre_prénom&gt;</code>)</li>
-<li class="fragment">Ouvrir une <code>Pull Request</code> (<code>PR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt distant</li>
-<li class="fragment">Ouvrir une <code>Issue</code> dans laquelle vous mentionnez la <code>Pull Request</code> précédemment ouverte</li>
+<li class="fragment">Sur <code>GitHub</code>, chaque personne ouvre une <code>Issue</code> sur le même dépôt que les applications précédentes, dans laquelle vous suggérez une modification à apporter à votre projet</li>
+<li class="fragment">Créer une branche dont le nom indique la modification que vous allez apporter (ex : <code>ajout-authentification</code>)</li>
+<li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur une nouvelle branche du dépôt distant (<code>git push -u origin &lt;votre_branche&gt;</code>)</li>
+<li class="fragment">Ouvrir une <code>Pull Request</code> (<code>PR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt distant. Spécifier que l’acceptation de la <code>Pull Request</code> entraînera la fermeture automatique de l’<code>Issue</code> associée en écrivant dans le corps de la <code>PR</code> : <code>close #N</code> où <code>N</code> est le numéro de l’<code>Issue</code> en question</li>
+<li class="fragment">Chaque personne effectue finalement une <em>review</em> d’une <code>PR</code> d’un autre membre de l’équipe, suite à quoi les différentes <code>PR</code> peuvent être fusionnées</li>
 </ol>
 </div>
 </div>
@@ -1084,6 +1115,26 @@
 </section>
 <section id="application-7" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 7</h2>
+<div class="callout callout-tip no-icon callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<p><strong>Utilisation de <code>GitLab</code></strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Cette application vise à prendre en matin l’interface de <code>GitLab</code>, éventuellement dans le cadre de votre environnement interne de travail.</p>
+<ol type="1">
+<li class="fragment">Dans le cadre d’un <code>GitLab</code> interne, il est plus confortable d’utiliser l’authentification via clé <code>ssh</code> plutôt que l’authentification par <em>token</em>. Si vous n’en avez pas encore, générer une clé <code>ssh</code> et ajouter celle-ci à votre compte <code>GitLab</code>. Se référer pour cela à la <a href="https://docs.gitlab.com/ee/user/ssh.html">documentation GitLab</a> ou, idéalement, à la documentation de cette procédure sur votre environnement interne de travail.</li>
+<li class="fragment">Explorer l’interface de <code>GitLab</code> pour retrouver les différents éléments que nous avons exploités sur l’interface de <code>GitHub</code>.</li>
+<li class="fragment">Créer un projet dans son espace personnel sur <code>GitLab</code> et répéter les opérations des applications 1 et 2.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="application-8-bonus" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Application 8 (bonus)</h2>
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
@@ -1128,9 +1179,6 @@
 </section>
 <section id="merci-pour-votre-attention" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Merci pour votre attention !</h2>
-<!--
-![](https://miro.medium.com/max/820/0*Gb3B1-Xk5qHaxU7v.jpg){fig-align="center"}
--->
 <div class="footer footer-default">
 <p>Bonnes pratiques pour les projets statistiques</p>
 </div>

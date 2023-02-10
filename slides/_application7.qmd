@@ -1,14 +1,11 @@
 :::{.callout-tip collapse="true" icon=false}
-## Contribution à un projet open-source
+## Utilisation de `GitLab`
 
 ::: {.incremental}
-1. Sur `GitHub`, faire un `fork` du dépôt [`git-exo`](https://github.com/avouacr/git-exo.git)
-2. Créer une branche intitulée `<votre_nom>-<votre_prénom>`
-3. Effectuer un `commit` avec les modifications de votre choix, puis pousser les changements sur votre `fork`
-4. Ouvrir une `Pull Request` (`PR`) pour proposer d'intégrer vos changements sur la branche principale du dépôt [`git-exo`](https://github.com/avouacr/git-exo.git)
-5. Ouvrir une `Issue` dans laquelle vous mentionnez la `Pull Request` précédemment ouverte
-:::
+Cette application vise à prendre en matin l'interface de `GitLab`, éventuellement dans le cadre de votre environnement interne de travail.
 
+1. Dans le cadre d'un `GitLab` interne, il est plus confortable d'utiliser l'authentification via clé `ssh` plutôt que l'authentification par *token*. Si vous n'en avez pas encore, générer une clé `ssh` et ajouter celle-ci à votre compte `GitLab`. Se référer pour cela à la [documentation GitLab](https://docs.gitlab.com/ee/user/ssh.html) ou, idéalement, à la documentation de cette procédure sur votre environnement interne de travail.
+2. Explorer l'interface de `GitLab` pour retrouver les différents éléments que nous avons exploités sur l'interface de `GitHub`.
+3. Créer un projet dans son espace personnel sur `GitLab` et répéter les opérations des applications 1 et 2.
 :::
-
-❓ **Question** : pourquoi, avec un `fork`, est-il très important de toujours effectuer une `Pull Request` à partir d'une branche différente de la branche principale ?
+:::
