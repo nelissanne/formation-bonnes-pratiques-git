@@ -231,7 +231,7 @@ L'utilisation de `Git` nécessite [__certaines notions préalables__]{.orange}:
 
 ## Concepts {auto-animate=true}
 
-`Git`, `GitHub`, `GitLab`... quelles différences ?
+#### `Git`, `GitHub`, `GitLab`... quelles différences ?
 
 :::{.incremental}
 - `Git` est un **logiciel** ;
@@ -241,7 +241,7 @@ L'utilisation de `Git` nécessite [__certaines notions préalables__]{.orange}:
 
 ## Concepts {auto-animate=true}
 
-`Git`, `GitHub`, `GitLab`... quelles différences ?
+#### `Git`, `GitHub`, `GitLab`... quelles différences ?
 
 
 :::{.incremental}
@@ -260,33 +260,32 @@ L'utilisation de `Git` nécessite [__certaines notions préalables__]{.orange}:
 
 ## Concepts {auto-animate=true}
 
-Dépôt local / dépôt distant (`remote`)
+#### Dépôt local / dépôt distant (`remote`)
 
-![](img/localremote.png){ fig-align="center"}
+![](img/localremote.png){fig-align="center" height=400}
 
-Source : [Collaborative work with R](https://collaboratif-git-formation-insee.netlify.app/des-bases-de-git.html)
+- Par défaut, le dépôt distant porte l'alias `origin`
 
-
-## Concepts {auto-animate=true}
+<!-- ## Concepts {auto-animate=true}
 
 _Workflow_ (version littéraire) :
 
 - On travaille sur un dépôt local en éditant des fichiers
 - On dit à `Git` que ces fichiers doivent être suivis (`staging area`)
 - On valide les modifications faites en local (`commit`)
-- On soumet les modifications (`push`) après avoir récupéré la version collective (`pull`)
+- On soumet les modifications (`push`) après avoir récupéré la version collective (`pull`) -->
 
 ## Concepts {auto-animate=true}
 
-_Workflow_ (version imagée) :
+#### _Workflow_ local
 
-![](img/areas.png){ fig-align="center"}
+![](img/areas.png){fig-align="center" height=400}
 
 Source : [Git Documentation](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
 
 ## Concepts {auto-animate=true}
 
-_Workflow_ (version imagée complète) :
+#### _Workflow_ complet
 
 ![Source : [itnext.io](https://itnext.io/git-concepts-for-newcomers-part-2-git-repository-working-tree-and-staging-area-a2e720bf3528)](img/completeworkflow.png){height="400" width="500"}
 
