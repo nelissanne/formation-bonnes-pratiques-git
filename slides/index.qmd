@@ -478,6 +478,7 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 - **Trouver de l'aide**:
     - Pour toute question : le salon Tchap [Insee-Git-Gitlab](https://tchap.gouv.fr/#/room/#InseeGitGitlablPtu8f1Frns:agent.finances.tchap.gouv.fr)
-    - Sollicitez vos collègues utilisateurs de Git !
+    - A l'Insee : la [documentation utilisateurs] pour l'utilisation de `Git` sur `AUS`
+    - Sollicitez vos collègues utilisateurs de `Git` !
 
 ## Merci pour votre attention !
