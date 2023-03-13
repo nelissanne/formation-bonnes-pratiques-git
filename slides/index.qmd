@@ -225,7 +225,7 @@ L'utilisation de `Git` nécessite [__certaines notions préalables__]{.orange}:
 - L'**usage quotidien** n'implique que [**quelques commandes**]{.orange}
 - [**Enormément de ressources**]{.orange} disponibles sur internet
 - Des [**interfaces visuelles**]{.orange} (ex: `RStudio`, `Sublime Merge`, `VS Code`) qui facilitent l'apprentissage
-- Un petit investissement individuel pour de [**gros gains collectifs**]{.orange}
+- Un investissement individuel pour de [**gros gains collectifs**]{.orange}
 :::
 
 
@@ -287,7 +287,7 @@ Source : [Git Documentation](https://git-scm.com/book/en/v2/Getting-Started-What
 
 #### _Workflow_ complet
 
-![Source : [itnext.io](https://itnext.io/git-concepts-for-newcomers-part-2-git-repository-working-tree-and-staging-area-a2e720bf3528)](img/completeworkflow.png){height="400" width="500"}
+![Source : [itnext.io](https://itnext.io/git-concepts-for-newcomers-part-2-git-repository-working-tree-and-staging-area-a2e720bf3528)](img/completeworkflow_cropped.png){height="300" width="500"}
 
 ## Commandes essentielles {auto-animate=true}
 
@@ -332,13 +332,16 @@ un bon `.gitignore`)
 
 ## Modes d'authentification
 
+
 :::{.incremental}
 - [**https**]{.orange}
   - `git clone https://github.com/username/projet.git`
-  - simple à utiliser
   - authentification username/token à chaque *push*
+  - en local, les identifiants peuvent être stockés dans la dénomination de l'origin
+  - le token est alors lu dans un .txt **non indexé**
 
 - [**ssh**]{.orange}
+*bloqué à la Drees*
   - `git clone git@github.com:username/projet.git`
   - (plus) complexe à initialiser
   - authentification automatique 
@@ -437,11 +440,11 @@ __Format des commits__
 
 ![](img/branches.png)
 
-## Exemple d'organisation : le *GitHub flow*
+## Exemple d'organisation : le *GitLab flow*
 
 ![](img/ghflow.png)
 
-Description plus détaillée : [ici](https://docs.github.com/en/get-started/quickstart/github-flow)
+Description plus détaillée : [ici](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
 
 <!--
 ## Adopter de bonnes pratiques collaboratives {.smaller}
@@ -451,7 +454,7 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 ![](https://miro.medium.com/max/400/0*XaLzNzYkA6PZjbl9.jpg){height="350" fig-align="center"}
 -->
 
-## Application 6
+## Application 6 {.smaller}
 
 {{< include _application6.qmd >}}
 

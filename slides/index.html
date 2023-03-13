@@ -631,7 +631,7 @@
 <li class="fragment">L’<strong>usage quotidien</strong> n’implique que <span class="orange"><strong>quelques commandes</strong></span></li>
 <li class="fragment"><span class="orange"><strong>Enormément de ressources</strong></span> disponibles sur internet</li>
 <li class="fragment">Des <span class="orange"><strong>interfaces visuelles</strong></span> (ex: <code>RStudio</code>, <code>Sublime Merge</code>, <code>VS Code</code>) qui facilitent l’apprentissage</li>
-<li class="fragment">Un petit investissement individuel pour de <span class="orange"><strong>gros gains collectifs</strong></span></li>
+<li class="fragment">Un investissement individuel pour de <span class="orange"><strong>gros gains collectifs</strong></span></li>
 </ul>
 </div>
 </section>
@@ -708,7 +708,7 @@ _Workflow_ (version littéraire) :
 <h4 data-background-image="background.svg" data-background-size="contain" id="workflow-complet"><em>Workflow</em> complet</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/completeworkflow.png" width="500" height="400"></p>
+<p><img data-src="img/completeworkflow_cropped.png" width="500" height="300"></p>
 <p></p><figcaption>Source : <a href="https://itnext.io/git-concepts-for-newcomers-part-2-git-repository-working-tree-and-staging-area-a2e720bf3528">itnext.io</a></figcaption><p></p>
 </figure>
 </div>
@@ -813,10 +813,11 @@ _Workflow_ (version littéraire) :
 <li class="fragment"><span class="orange"><strong>https</strong></span>
 <ul>
 <li class="fragment"><code>git clone https://github.com/username/projet.git</code></li>
-<li class="fragment">simple à utiliser</li>
 <li class="fragment">authentification username/token à chaque <em>push</em></li>
+<li class="fragment">en local, les identifiants peuvent être stockés dans la dénomination de l’origin</li>
+<li class="fragment">le token est alors lu dans un .txt <strong>non indexé</strong></li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>ssh</strong></span>
+<li class="fragment"><span class="orange"><strong>ssh</strong></span> <em>bloqué à la Drees</em>
 <ul>
 <li class="fragment"><code>git clone git@github.com:username/projet.git</code></li>
 <li class="fragment">(plus) complexe à initialiser</li>
@@ -835,24 +836,20 @@ _Workflow_ (version littéraire) :
 <div class="callout-content">
 <div>
 <ol type="1">
-<li class="fragment">Créer un compte <a href="https://github.com/"><code>GitHub</code></a></li>
-<li class="fragment">Créer un nouveau dépôt privé sur <code>GitHub</code></li>
+<li class="fragment">Créer un compte <a href="https://gitlab.com/"><code>GitLab</code></a></li>
+<li class="fragment">Créer un nouveau dépôt <strong>privé</strong> sur <code>GitLab</code> dans son espace personnel</li>
+<li class="fragment"><a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">Générer un <em>token</em></a> (jeton d’authentification) sur <code>GitLab</code></li>
 <li class="fragment">Créer un compte sur le <a href="https://datalab.sspcloud.fr/home">SSP Cloud</a></li>
-<li class="fragment">Lancer un service <code>RStudio</code></li>
-<li class="fragment">Utiliser un <code>terminal</code> pour activer le stockage des identifiants :
-<ul>
-<li class="fragment"><code>git config --global credential.helper store</code></li>
-</ul></li>
-<li class="fragment">Cloner le dépôt distant sur votre environnement local (ici, le <code>RStudio</code> du <code>Datalab</code>):
-<ul>
-<li class="fragment"><code>File</code> → <code>New project</code> → <code>Version Control</code> → <code>Git</code></li>
-</ul></li>
-<li class="fragment"><a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Générer un <em>token</em></a> (jeton d’authentification) sur <code>GitHub</code></li>
-<li class="fragment">Stocker le <em>token</em> sur le <code>SSP Cloud</code> (ou un gestionnaire de mot de passe) :
+<li class="fragment">Stocker le <em>token GitLab</em> sur le <code>SSP Cloud</code> (ou un gestionnaire de mot de passe) :
 <ul>
 <li class="fragment"><code>Mon Compte</code> -&gt; <code>Services externes</code> -&gt; <code>Jeton d'accès personnel GitHub</code></li>
+<li class="fragment">⚠️ <em>La variable peut stocker un jeton GitHub ou GitLab au choix, malgré sa dénomination</em></li>
 </ul></li>
-<li class="fragment">Terminer la procédure de clonage en fournissant le <em>token</em></li>
+<li class="fragment">Lancer un service <code>RStudio</code>. Dans l’onglet de configuration <code>Git</code> du service, fixer la durée du <code>Cache</code> pour le stockage des identifiants <code>GitLab</code> à une valeur suffisamment élevée <em>(36000 = 10h)</em></li>
+<li class="fragment">Cloner le dépôt distant sur votre environnement local (ici, le <code>RStudio</code> du <code>Datalab</code>):
+<ul>
+<li class="fragment"><code>File</code> → <code>New project</code> → <code>Version Control</code> → <code>Git</code> en utilisant l’adresse https du repo</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -872,17 +869,18 @@ _Workflow_ (version littéraire) :
 <ol type="1">
 <li class="fragment">Créer un dossier 📁 <code>scripts</code></li>
 <li class="fragment">Y créer les fichiers <code>script1.R</code> et <code>script2.R</code>, chacun contenant quelques commandes <code>R</code> de votre choix</li>
-<li class="fragment">Ajouter ces fichiers à l’index (<em>staging area</em>) de Git en les cochant dans l’interface <code>RStudio</code></li>
+<li class="fragment">Ajouter ces fichiers à la zone de <em>staging</em> de Git en les cochant dans l’interface <code>RStudio</code></li>
 <li class="fragment">Effectuer un <code>commit</code>, auquel on donnera un message descriptif pertinent</li>
 <li class="fragment">Supprimer le fichier <code>script1.R</code> et modifier le contenu du fichier <code>script2.R</code></li>
 <li class="fragment">Analyser ce qui se passe lorsque l’on coche ces fichiers dans l’interface <code>RStudio</code></li>
 <li class="fragment">Effectuer un nouveau <em>commit</em> pour ajouter ces modifications à l’historique</li>
+<li class="fragment">Visualiser l’historique du projet à partir de l’interface graphique de <code>RStudio</code></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<p>❓ <strong>Question</strong> : à ce stade, le dépôt du projet sur <code>GitHub</code> (<code>remote</code>) a-t-il été modifié ?</p>
+<p>❓ <strong>Question</strong> : à ce stade, le dépôt du projet sur <code>GitLab</code> (<code>remote</code>) a-t-il été modifié ?</p>
 </section>
 <section id="application-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 2</h2>
@@ -895,21 +893,16 @@ _Workflow_ (version littéraire) :
 <div>
 <ol type="1">
 <li class="fragment">Effectuer un <code>push</code> pour intégrer les changements locaux au projet distant</li>
-<li class="fragment">Parcourir l’historique du projet sur <code>GitHub</code>
+<li class="fragment">Parcourir l’historique du projet sur <code>GitLab</code>
 <ol type="a">
 <li class="fragment">Faire apparaître les différences entre deux versions consécutives du projet</li>
 <li class="fragment">Afficher une version passée du projet</li>
 </ol></li>
-<li class="fragment">Modifier le fichier <code>README.md</code> via l’interface d’édition web</li>
-<li class="fragment">Faire une modification du projet local, puis <code>commit</code>/<code>push</code>. Que se passe-t-il ?</li>
-<li class="fragment">Faire un <code>pull</code> pour intégrer les changements distants au projet local</li>
-<li class="fragment">Effectuer à nouveau l’étape de <code>push</code> des changements locaux</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<p>❓ <strong>Question</strong> : comment s’assurer que notre projet local est toujours iso au projet distant ?</p>
 </section>
 <section id="bonnes-pratiques" class="slide level2 smaller" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Bonnes pratiques</h2>
@@ -972,7 +965,7 @@ _Workflow_ (version littéraire) :
 </div>
 <div class="callout-content">
 <div>
-<p>Lors de la création du projet sur <code>GitHub</code>, nous avons demandé la création d’un fichier <code>.gitignore</code>, qui se situe à la racine du projet. Il spécifie l’ensemble des fichiers qui seront toujours exclus de l’indexation faite par <code>Git</code>.</p>
+<p>Lors de la création du projet sur <code>GitLab</code>, nous avons demandé la création d’un fichier <code>.gitignore</code>, qui se situe à la racine du projet. Il spécifie l’ensemble des fichiers qui seront toujours exclus de l’indexation faite par <code>Git</code>.</p>
 <ol type="1">
 <li class="fragment">Exclure les fichiers de type <code>*.pdf</code> et <code>*.html</code></li>
 <li class="fragment">Créer un dossier <code>data</code> à la racine du projet et créer à l’intérieur de celui-ci un fichier <code>data/raw.csv</code> avec une ligne de données quelconque</li>
@@ -1025,7 +1018,7 @@ _Workflow_ (version littéraire) :
 <li class="fragment">Une personne aura la responsabilité d’être <span class="blue2"><strong>mainteneur</strong></span></li>
 <li class="fragment">Deux à trois personnes seront <span class="blue2"><strong>développeurs</strong></span></li>
 </ul></li>
-<li class="fragment">Le mainteneur crée un dépôt sur <code>Github</code>. Il/Elle donne des droits au(x) développeur(s) du projet</li>
+<li class="fragment">Le mainteneur crée un dépôt sur <code>GitLab</code>. Il/Elle donne des droits au(x) développeur(s) du projet</li>
 <li class="fragment">Créer une copie locale (clone) du projet sur son service <code>RStudio</code> du <a href="https://datalab.sspcloud.fr/home">Datalab</a></li>
 <li class="fragment">Créer un fichier <code>&lt;votre_nom&gt;-&lt;votre_prenom&gt;.md</code>. Écrire dedans trois phrases de son choix sans ponctuation ni majuscules, puis <code>commit</code> et <code>push</code> les modifications</li>
 </ol>
@@ -1079,10 +1072,10 @@ _Workflow_ (version littéraire) :
 <h2 data-id="quarto-animate-title">Le modèle des branches</h2>
 
 <img data-src="img/branches.png" class="r-stretch"></section>
-<section id="exemple-dorganisation-le-github-flow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple d’organisation : le <em>GitHub flow</em></h2>
+<section id="exemple-dorganisation-le-gitlab-flow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple d’organisation : le <em>GitLab flow</em></h2>
 
-<img data-src="img/ghflow.png" class="r-stretch"><p>Description plus détaillée : <a href="https://docs.github.com/en/get-started/quickstart/github-flow">ici</a></p>
+<img data-src="img/ghflow.png" class="r-stretch"><p>Description plus détaillée : <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">ici</a></p>
 <!--
 ## Adopter de bonnes pratiques collaboratives {.smaller}
 
@@ -1091,7 +1084,7 @@ _Workflow_ (version littéraire) :
 ![](https://miro.medium.com/max/400/0*XaLzNzYkA6PZjbl9.jpg){height="350" fig-align="center"}
 -->
 </section>
-<section id="application-6" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="application-6" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 6</h2>
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1101,11 +1094,11 @@ _Workflow_ (version littéraire) :
 <div class="callout-content">
 <div>
 <ol type="1">
-<li class="fragment">Sur <code>GitHub</code>, chaque personne ouvre une <code>Issue</code> sur le même dépôt que les applications précédentes, dans laquelle vous suggérez une modification à apporter à votre projet</li>
+<li class="fragment">Sur <code>GitLab</code>, chaque personne ouvre une <code>Issue</code> sur le même dépôt que les applications précédentes, dans laquelle vous suggérez une modification à apporter à votre projet</li>
 <li class="fragment">Créer une branche dont le nom indique la modification que vous allez apporter (ex : <code>ajout-authentification</code>)</li>
-<li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur une nouvelle branche du dépôt distant (<code>git push -u origin &lt;votre_branche&gt;</code>)</li>
-<li class="fragment">Ouvrir une <code>Pull Request</code> (<code>PR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt distant. Spécifier que l’acceptation de la <code>Pull Request</code> entraînera la fermeture automatique de l’<code>Issue</code> associée en écrivant dans le corps de la <code>PR</code> : <code>close #N</code> où <code>N</code> est le numéro de l’<code>Issue</code> en question</li>
-<li class="fragment">Chaque personne effectue finalement une <em>review</em> d’une <code>PR</code> d’un autre membre de l’équipe, suite à quoi les différentes <code>PR</code> peuvent être fusionnées</li>
+<li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur une nouvelle branche du dépôt distant</li>
+<li class="fragment">Ouvrir une <code>Merge Request</code> (<code>MR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt distant. Spécifier que l’acceptation de la <code>Merge Request</code> entraînera la fermeture automatique de l’<code>Issue</code> associée en écrivant dans le corps de la <code>MR</code> : <code>close #N</code> où <code>N</code> est le numéro de l’<code>Issue</code> en question</li>
+<li class="fragment">Chaque personne effectue finalement une <em>review</em> d’une <code>MR</code> d’un autre membre de l’équipe, suite à quoi les différentes <code>MR</code> peuvent être fusionnées</li>
 </ol>
 </div>
 </div>
@@ -1118,15 +1111,14 @@ _Workflow_ (version littéraire) :
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
-<p><strong>Utilisation de <code>GitLab</code></strong></p>
+<p><strong>Utilisation de <code>GitHub</code></strong></p>
 </div>
 <div class="callout-content">
 <div>
-<p>Cette application vise à prendre en matin l’interface de <code>GitLab</code>, éventuellement dans le cadre de votre environnement interne de travail.</p>
+<p>Cette application vise à prendre en matin l’interface de <code>GitHub</code>, notamment pour des projets ou des repos plus ouverts à la communauté scientifique et au grand public.</p>
 <ol type="1">
-<li class="fragment">Dans le cadre d’un <code>GitLab</code> interne, il est plus confortable d’utiliser l’authentification via clé <code>ssh</code> plutôt que l’authentification par <em>token</em>. Si vous n’en avez pas encore, générer une clé <code>ssh</code> et ajouter celle-ci à votre compte <code>GitLab</code>. Se référer pour cela à la <a href="https://docs.gitlab.com/ee/user/ssh.html">documentation GitLab</a> ou, idéalement, à la documentation de cette procédure sur votre environnement interne de travail.</li>
-<li class="fragment">Explorer l’interface de <code>GitLab</code> pour retrouver les différents éléments que nous avons exploités sur l’interface de <code>GitHub</code>.</li>
-<li class="fragment">Créer un projet dans son espace personnel sur <code>GitLab</code> et répéter les opérations des applications 1 et 2.</li>
+<li class="fragment">Explorer l’interface de <code>GitHub</code> pour retrouver les différents éléments que nous avons exploités sur l’interface de <code>GitLab</code>.</li>
+<li class="fragment">Créer un projet dans son espace personnel sur <code>GitHub</code> et répéter les opérations des applications 1 et 2.</li>
 </ol>
 </div>
 </div>
@@ -1143,11 +1135,11 @@ _Workflow_ (version littéraire) :
 <div class="callout-content">
 <div>
 <ol type="1">
-<li class="fragment">Sur <code>GitHub</code>, faire un <code>fork</code> du dépôt <a href="https://github.com/avouacr/git-exo.git"><code>git-exo</code></a></li>
+<li class="fragment">Sur <code>GitLab</code>, faire un <code>fork</code> du dépôt <a href="https://git.drees.fr/mathildedonnenfeld/crumble-collaboratif"><code>git-exo</code></a></li>
 <li class="fragment">Créer une branche intitulée <code>&lt;votre_nom&gt;-&lt;votre_prénom&gt;</code></li>
 <li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur votre <code>fork</code></li>
-<li class="fragment">Ouvrir une <code>Pull Request</code> (<code>PR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt <a href="https://github.com/avouacr/git-exo.git"><code>git-exo</code></a></li>
-<li class="fragment">Ouvrir une <code>Issue</code> dans laquelle vous mentionnez la <code>Pull Request</code> précédemment ouverte</li>
+<li class="fragment">Ouvrir une <code>Merge Request</code> (<code>MR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt <a href="https://github.com/avouacr/git-exo.git"><code>git-exo</code></a></li>
+<li class="fragment">Ouvrir une <code>Issue</code> dans laquelle vous mentionnez la <code>Merge Request</code> précédemment ouverte</li>
 </ol>
 </div>
 </div>
@@ -1172,7 +1164,8 @@ _Workflow_ (version littéraire) :
 <li><strong>Trouver de l’aide</strong>:
 <ul>
 <li>Pour toute question : le salon Tchap <a href="https://tchap.gouv.fr/#/room/#InseeGitGitlablPtu8f1Frns:agent.finances.tchap.gouv.fr">Insee-Git-Gitlab</a></li>
-<li>Sollicitez vos collègues utilisateurs de Git !</li>
+<li>A l’Insee : la [documentation utilisateurs] pour l’utilisation de <code>Git</code> sur <code>AUS</code></li>
+<li>Sollicitez vos collègues utilisateurs de <code>Git</code> !</li>
 </ul></li>
 </ul>
 </div>
