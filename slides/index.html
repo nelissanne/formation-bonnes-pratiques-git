@@ -812,14 +812,14 @@ _Workflow_ (version littéraire) :
 <ul>
 <li class="fragment"><span class="orange"><strong>https</strong></span>
 <ul>
-<li class="fragment"><code>git clone https://github.com/username/projet.git</code></li>
+<li class="fragment"><code>git clone https://git.drees.fr/username/projet.git</code></li>
 <li class="fragment">authentification username/token à chaque <em>push</em></li>
 <li class="fragment">en local, les identifiants peuvent être stockés dans la dénomination de l’origin</li>
 <li class="fragment">le token est alors lu dans un .txt <strong>non indexé</strong></li>
 </ul></li>
 <li class="fragment"><span class="orange"><strong>ssh</strong></span> <em>bloqué à la Drees</em>
 <ul>
-<li class="fragment"><code>git clone git@github.com:username/projet.git</code></li>
+<li class="fragment"><code>git clone git@git.drees.fr:username/projet.git</code></li>
 <li class="fragment">(plus) complexe à initialiser</li>
 <li class="fragment">authentification automatique</li>
 </ul></li>
@@ -989,7 +989,7 @@ _Workflow_ (version littéraire) :
 <li>L’éco-système <code>Git</code> <span class="blue2"><strong>facilite</strong> le travail collaboratif</span>
 <ul>
 <li><code>Git</code> <i class="fa-brands fa-git-alt" aria-hidden="true"></i> : modèle des <span class="orange"><strong>branches</strong></span></li>
-<li><code>GitHub</code> <i class="fa-brands fa-github" aria-hidden="true"></i> / <code>GitLab</code> <i class="fa-brands fa-gitlab" aria-hidden="true"></i> : <span class="orange"><strong>Issues</strong>, <strong>Pull Requests</strong>, <strong>Forks</strong></span></li>
+<li><code>GitHub</code> <i class="fa-brands fa-github" aria-hidden="true"></i> / <code>GitLab</code> <i class="fa-brands fa-gitlab" aria-hidden="true"></i> : <span class="orange"><strong>Issues</strong>, <strong>Merge Requests</strong>, <strong>Forks</strong></span></li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -1022,9 +1022,7 @@ _Workflow_ (version littéraire) :
 <li class="fragment">Créer une copie locale (clone) du projet sur son service <code>RStudio</code> du <a href="https://datalab.sspcloud.fr/home">Datalab</a></li>
 <li class="fragment">Créer un fichier <code>&lt;votre_nom&gt;-&lt;votre_prenom&gt;.md</code>. Écrire dedans trois phrases de son choix sans ponctuation ni majuscules, puis <code>commit</code> et <code>push</code> les modifications</li>
 </ol>
-</div>
 <p><strong>À ce stade, une seule personne (la plus rapide) devrait ne pas avoir rencontré de rejet du <code>push</code>.</strong> C’est normal ! Avant d’accepter une modification, <code>Git</code> vérifie en premier lieu la cohérence de la branche avec le dépôt distant. Le premier ayant fait un <code>push</code> a modifié le dépôt commun ; les autres doivent intégrer ces modifications dans leur version locale (<code>pull</code>) avant d’avoir le droit de proposer un changement.</p>
-<div>
 <ol start="5" type="1">
 <li class="fragment">Pour ceux dont le <code>push</code> a été refusé, effectuer un <code>pull</code> des modifications distantes</li>
 <li class="fragment">Dans <code>RStudio</code>, afficher l’historique du projet et regarder la manière dont ont été intégrées les modifications des collaborateurs</li>
@@ -1072,10 +1070,10 @@ _Workflow_ (version littéraire) :
 <h2 data-id="quarto-animate-title">Le modèle des branches</h2>
 
 <img data-src="img/branches.png" class="r-stretch"></section>
-<section id="exemple-dorganisation-le-gitlab-flow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple d’organisation : le <em>GitLab flow</em></h2>
+<section id="exemple-dorganisation-le-github-flow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple d’organisation : le <em>GitHub flow</em></h2>
 
-<img data-src="img/ghflow.png" class="r-stretch"><p>Description plus détaillée : <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">ici</a></p>
+<img data-src="img/ghflow.png" class="r-stretch"><p>Description plus détaillée : <a href="https://docs.github.com/en/get-started/quickstart/github-flow">ici</a>. Pour une proposition plus complexe, voir le <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">GitLab flow</a>.</p>
 <!--
 ## Adopter de bonnes pratiques collaboratives {.smaller}
 
@@ -1089,7 +1087,7 @@ _Workflow_ (version littéraire) :
 <div class="callout callout-tip no-icon callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
-<p><strong>Branches, <em>issues</em> et <em>pull requests</em></strong></p>
+<p><strong>Branches, <em>issues</em> et <em>merge requests</em></strong></p>
 </div>
 <div class="callout-content">
 <div>
@@ -1138,14 +1136,14 @@ _Workflow_ (version littéraire) :
 <li class="fragment">Sur <code>GitLab</code>, faire un <code>fork</code> du dépôt <a href="https://git.drees.fr/mathildedonnenfeld/crumble-collaboratif"><code>git-exo</code></a></li>
 <li class="fragment">Créer une branche intitulée <code>&lt;votre_nom&gt;-&lt;votre_prénom&gt;</code></li>
 <li class="fragment">Effectuer un <code>commit</code> avec les modifications de votre choix, puis pousser les changements sur votre <code>fork</code></li>
-<li class="fragment">Ouvrir une <code>Merge Request</code> (<code>MR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt <a href="https://github.com/avouacr/git-exo.git"><code>git-exo</code></a></li>
+<li class="fragment">Ouvrir une <code>Merge Request</code> (<code>MR</code>) pour proposer d’intégrer vos changements sur la branche principale du dépôt <a href="https://git.drees.fr/mathildedonnenfeld/crumble-collaboratif"><code>crumble_collaboratif</code></a></li>
 <li class="fragment">Ouvrir une <code>Issue</code> dans laquelle vous mentionnez la <code>Merge Request</code> précédemment ouverte</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<p>❓ <strong>Question</strong> : pourquoi, avec un <code>fork</code>, est-il très important de toujours effectuer une <code>Pull Request</code> à partir d’une branche différente de la branche principale ?</p>
+<p>❓ <strong>Question</strong> : pourquoi, avec un <code>fork</code>, est-il très important de toujours effectuer une <code>Merge Request</code> à partir d’une branche différente de la branche principale ?</p>
 </section>
 <section id="ressources-utiles" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Ressources utiles</h2>

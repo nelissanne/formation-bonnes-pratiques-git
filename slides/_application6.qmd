@@ -1,5 +1,5 @@
 :::{.callout-tip collapse="true" icon=false}
-## Branches, *issues* et *pull requests*
+## Branches, *issues* et *merge requests*
 
 ::: {.incremental}
 1. Sur `GitLab`, chaque personne ouvre une `Issue` sur le même dépôt que les applications précédentes, dans laquelle vous suggérez une modification à apporter à votre projet

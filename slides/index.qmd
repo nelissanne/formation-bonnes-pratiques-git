@@ -335,14 +335,14 @@ un bon `.gitignore`)
 
 :::{.incremental}
 - [**https**]{.orange}
-  - `git clone https://github.com/username/projet.git`
+  - `git clone https://git.drees.fr/username/projet.git`
   - authentification username/token à chaque *push*
   - en local, les identifiants peuvent être stockés dans la dénomination de l'origin
   - le token est alors lu dans un .txt **non indexé**
 
 - [**ssh**]{.orange}
 *bloqué à la Drees*
-  - `git clone git@github.com:username/projet.git`
+  - `git clone git@git.drees.fr:username/projet.git`
   - (plus) complexe à initialiser
   - authentification automatique 
 :::
@@ -415,7 +415,7 @@ __Format des commits__
 
 - L'éco-système `Git` [**facilite** le travail collaboratif]{.blue2}
     - `Git` {{< fa brands git-alt >}} : modèle des [__branches__]{.orange}
-    - `GitHub` {{< fa brands github >}} / `GitLab` {{< fa brands gitlab >}} : [**Issues**, **Pull Requests**, **Forks**]{.orange}
+    - `GitHub` {{< fa brands github >}} / `GitLab` {{< fa brands gitlab >}} : [**Issues**, **Merge Requests**, **Forks**]{.orange}
 
 . . .
 
@@ -440,11 +440,12 @@ __Format des commits__
 
 ![](img/branches.png)
 
-## Exemple d'organisation : le *GitLab flow*
+## Exemple d'organisation : le *GitHub flow*
 
 ![](img/ghflow.png)
 
-Description plus détaillée : [ici](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
+Description plus détaillée : [ici](https://docs.github.com/en/get-started/quickstart/github-flow).
+Pour une proposition plus complexe, voir le [GitLab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html).
 
 <!--
 ## Adopter de bonnes pratiques collaboratives {.smaller}
